@@ -57,7 +57,104 @@ class _MyHomePageState extends State<MyHomePage> {
         car.move();
         bike.move();
         break;
-    // Add cases for other tasks...
+      case 5:
+        Library library = Library();
+        library.addBook(Book(title: "1984", author: "George Orwell", year: 1949));
+        library.addBook(Book(title: "Brave New World", author: "Aldous Huxley", year: 1932));
+        library.findByAuthor("George Orwell");
+        _output = "Task 5 executed: Books added and searched.";
+        break;
+      case 6:
+        BankAccount account = BankAccount(accountNumber: "123456789");
+        account.deposit(1000);
+        account.withdraw(500);
+        _output = "Task 6 executed: Deposit and withdrawal performed.";
+        break;
+      case 7:
+        Counter counter1 = Counter();
+        Counter counter2 = Counter();
+        _output = "Task 7 executed: Total objects created: ${Counter.objectCount}.";
+        break;
+      case 8:
+        Shape circle = Circle(radius: 5);
+        Shape rectangle = Rectangle(width: 4, height: 6);
+        _output = "Task 8 executed: Circle area: ${circle.getArea()}, Rectangle area: ${rectangle.getArea()}.";
+        break;
+      case 9:
+        List<Animal> moreAnimals = [Fish(), Bird()];
+        _output = "Task 9 executed: ";
+        for (var animal in moreAnimals) {
+          animal.makeSound();
+          _output += "${animal.runtimeType} makes sound. ";
+        }
+        break;
+      case 10:
+        University university = University();
+        university.addStudent(Student(name: "Alice", group: "CS101", grade: 90));
+        university.addStudent(Student(name: "Bob", group: "CS101", grade: 85));
+        university.sortByName();
+        _output = "Task 10 executed: Students added and sorted.";
+        break;
+      case 11:
+        Store store = Store();
+        store.addProduct(Product(name: "Laptop", price: 999.99, quantity: 10));
+        store.addProduct(Product(name: "Smartphone", price: 699.99, quantity: 5));
+        store.findProductByName("Laptop");
+        _output = "Task 11 executed: Products added and searched.";
+        break;
+      case 12:
+        PaymentSystem creditCard = CreditCard();
+        creditCard.pay();
+        _output = "Task 12 executed: Payment made with Credit Card.";
+        break;
+      case 13:
+        UniqueID id1 = UniqueID();
+        UniqueID id2 = UniqueID();
+        _output = "Task 13 executed: Unique IDs generated: ${id1.id}, ${id2.id}.";
+        break;
+      case 14:
+        Point p1 = Point(1, 2);
+        Point p2 = Point(4, 6);
+        Rectangle2 rectangle2 = Rectangle2(p1, p2);
+        _output = "Task 14 executed: Rectangle area: ${rectangle2.getArea()}.";
+        break;
+      case 15:
+        ComplexNumber c1 = ComplexNumber(1, 2);
+        ComplexNumber c2 = ComplexNumber(3, 4);
+        ComplexNumber sum = c1 + c2;
+        _output = "Task 15 executed: Sum of complex numbers: $sum.";
+        break;
+      case 16:
+        Matrix matrix1 = Matrix([[1, 2], [3, 4]]);
+        Matrix matrix2 = Matrix([[5, 6], [7, 8]]);
+        Matrix result = matrix1 + matrix2;
+        _output = "Task 16 executed: Resulting matrix:\n$result";
+        break;
+      case 17:
+        Player player = Player(name: "Hero");
+        Enemy enemy = Enemy(name: "Villain");
+        player.attack(enemy);
+        _output = "Task 17 executed: Player attacks enemy.";
+        break;
+      case 18:
+        Order order = Order();
+        order.addProduct(Product(name: "Laptop", price: 999.99, quantity: 1));
+        order.addProduct(Product(name: "Mouse", price: 25.99, quantity: 2));
+        double total = order.totalCost();
+        _output = "Task 18 executed: Total order cost: \$${total}.";
+        break;
+      case 19:
+        Smartphone smartphone = Smartphone(brand: "BrandX");
+        smartphone.turnOn();
+        smartphone.takePhoto();
+        smartphone.turnOff();
+        _output = "Task 19 executed: Smartphone used.";
+        break;
+      case 20:
+        Game game = Game();
+        game.start();
+        _output = "Task 20 executed: Game started.";
+        break;
       default:
         _output = "Invalid task number. Please enter a number from 1 to 20.";
     }
